@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="style.css">
 
 
-    <title>Home</title>
+    <title>Bootstrap Assignment</title>
 </head>
 
 <body>
@@ -49,31 +49,111 @@
     <div class="modal fade" id="basicModal" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
-                <div class="modal-header">
-                    <h4 class="modal-title" id="myModalLabel">Sign in</h4>
-                </div>
-                <div class="modal-body">
-                    <form>
-                        <div class="form-group">
-                            <div class="input-group">
-                                <div class="input-group-prepend">
-                                    <span class="input-group-text"> <i class="fa fa-user"></i> </span>
+                <div class="card">
+                    <article class="card-body">
+                        <button type="button" class="float-right btn btn-outline-primary" data-toggle="modal"
+                            data-target="#signupModal">
+                            Sign up
+                        </button>
+
+                        <div class="modal fade" id="signupModal" tabindex="-1" role="dialog"
+                            aria-labelledby="signupModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="signupModalLabel">Sign up</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div class="container">
+                                            <div class="row centered-form">
+                                                <div>
+                                                    <div class="panel panel-default">
+                                                        <div class="panel-body">
+                                                            <form role="form">
+                                                                <div class="row">
+                                                                    <div class="col-xs-6 col-sm-6 col-md-6">
+                                                                        <div class="form-group">
+                                                                            <input type="text" name="first_name"
+                                                                                id="first_name"
+                                                                                class="form-control input-sm"
+                                                                                placeholder="First Name">
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-xs-6 col-sm-6 col-md-6">
+                                                                        <div class="form-group">
+                                                                            <input type="text" name="last_name"
+                                                                                id="last_name"
+                                                                                class="form-control input-sm"
+                                                                                placeholder="Last Name">
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class="form-group">
+                                                                    <input type="email" name="email" id="email"
+                                                                        class="form-control input-sm"
+                                                                        placeholder="Email Address">
+                                                                </div>
+
+                                                                <div class="row">
+                                                                    <div class="col-xs-6 col-sm-6 col-md-6">
+                                                                        <div class="form-group">
+                                                                            <input type="password" name="password"
+                                                                                id="password"
+                                                                                class="form-control input-sm"
+                                                                                placeholder="Password">
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-xs-6 col-sm-6 col-md-6">
+                                                                        <div class="form-group">
+                                                                            <input type="password"
+                                                                                name="password_confirmation"
+                                                                                id="password_confirmation"
+                                                                                class="form-control input-sm"
+                                                                                placeholder="Confirm Password">
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+
+                                                                <input type="submit" value="Register"
+                                                                    class="btn btn-info btn-block">
+
+                                                            </form>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
-                                <input name="" class="form-control" placeholder="Email or login" type="email">
                             </div>
                         </div>
-                        <div class="form-group">
-                            <div class="input-group">
-                                <div class="input-group-prepend">
-                                    <span class="input-group-text"> <i class="fa fa-lock"></i> </span>
-                                </div>
+
+                        <h4 class="card-title mb-4 mt-1">Sign in</h4>
+
+                        <form>
+                            <div class="form-group">
+                                <label>Your email</label>
+                                <input name="" class="form-control" placeholder="Email" type="email">
+                            </div>
+                            <div class="form-group">
+                                <a class="float-right" href="#">Forgot?</a>
+                                <label>Your password</label>
                                 <input class="form-control" placeholder="******" type="password">
                             </div>
-                        </div>
-                        <div class="form-group">
-                            <button type="submit" class="btn btn-primary btn-block"> Login </button>
-                        </div>
-                    </form>
+                            <div class="form-group">
+                                <div class="checkbox">
+                                    <label> <input type="checkbox"> Save password </label>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <button type="submit" class="btn btn-primary btn-block"> Login </button>
+                            </div>
+                        </form>
+                    </article>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -161,7 +241,77 @@
         <h1 class="display-4">Contact me</h1>
         <hr class="my-4">
         <p>You should contact me. Press the button and a form will appear.</p>
-        <a class="btn btn-primary btn-lg" href="#" role="button">Contact me</a>
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#loginModal">Contact
+            me</button>
+        <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="loginModalLabel">Contact me</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <section class="mb-4">
+                            <h2 class="h1-responsive font-weight-bold text-center my-4">Contact me</h2>
+                            <p class="text-center w-responsive mx-auto mb-5">Do you have any questions? Please try
+                                out my new contact form!
+                            </p>
+                            <div class="row">
+                                <div class="col-md-9 mb-md-0 mb-5">
+                                    <form id="contact-form" name="contact-form" action="mail.php" method="POST">
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <div class="md-form mb-0">
+                                                    <input type="text" id="name" name="name" class="form-control">
+                                                    <label for="name" class="">Your name</label>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-6">
+                                                <div class="md-form mb-0">
+                                                    <input type="text" id="email" name="email" class="form-control">
+                                                    <label for="email" class="">Your email</label>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="md-form mb-0">
+                                                    <input type="text" id="subject" name="subject" class="form-control">
+                                                    <label for="subject" class="">Subject</label>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="col-md-12">
+
+                                                <div class="md-form">
+                                                    <textarea type="text" id="message" name="message" rows="2"
+                                                        class="form-control md-textarea"></textarea>
+                                                    <label for="message">Your message</label>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </form>
+
+                                    <div class="text-center text-md-left">
+                                        <a class="btn btn-primary" href="#">Send</a>
+                                    </div>
+                                    <div class="status"></div>
+                                </div>
+                            </div>
+
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
     <br><br>
